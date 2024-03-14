@@ -34,17 +34,10 @@
         position: absolute;
       }
 
-      .logo {
-        text-align: center;
-      }
-
       .logo img {
         margin: 24px 0 30px 0;
       }
 
-      .employee-info {
-        text-align: center;
-      }
       .employee-info img {
         border-radius: 100px;
       }
@@ -69,7 +62,6 @@
         margin: 0 0 34px 0;
       }
       .buttons {
-        text-align: center;
         margin-bottom: 34px;
       }
 
@@ -91,7 +83,6 @@
       .link-element {
         color: #191919;
         font-size: 18px;
-        font-style: normal;
         font-weight: 400;
         line-height: 18px;
         vertical-align: middle;
@@ -116,6 +107,13 @@
       }
       .floating-buttons a {
         cursor: pointer;
+      }
+
+      .svgElem {
+        position: absolute;
+        right: 0;
+        top: 121px;
+        z-index: -1;
       }
 
       #overlay {
@@ -166,6 +164,13 @@
         color: #0099c2;
         font-family: "Outfit", sans-serif;
         font-size: 10px;
+      }
+
+      @media only screen and (min-width: 500px) {
+        .container {
+          max-width: 360px;
+          margin: auto;
+        }
       }
     </style>
   </head>
@@ -292,13 +297,17 @@
           <a onclick="openPopup()" style="display: block">
             <img
               src="https://lh3.googleusercontent.com/d/1_lKyfH_ThGDV_G6oRoKmM0QsiqZ7KjMG"
-              alt=""
+              alt="popup icon"
               height="66"
               width="66"
             />
           </a>
           <a onclick="createContact()" style="display: block" id="downloadLink">
-            <img src="assets/contact.png" alt="" height="66" width="66"
+            <img
+              src="assets/contact.png"
+              alt="contact icon"
+              height="66"
+              width="66"
           /></a>
         </div>
       </div>
@@ -393,10 +402,7 @@
         </div>
       </div>
 
-      <div
-        class="svgElem"
-        style="position: absolute; right: 0; top: 121px; z-index: -1"
-      >
+      <div class="svgElem">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="360"
